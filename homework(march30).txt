@@ -5,7 +5,7 @@ book
  - title text
  - author text
  - publisher text
- -category text
+ - category text
   
 borrowing
  * id integer
@@ -33,21 +33,21 @@ classes
  - subject text 
  
 homework
- *id integer
- -subjects => subject.id
- -student => students.id
- -score integer
+ * id integer
+ - subjects => subject.id
+ - student => students.id
+ - score integer
  
 test
- *id integer
- -subjects => subject.id
- -student => students.id
- -score integer
+ * id integer
+ - subjects => subject.id
+ - student => students.id
+ - score integer
  
 finalproject
- *id integer
- teamname integer
- member => students.id
+ * id integer
+ - teamname integer
+ - member => students.id
  
   
 #3. Reception of Music
