@@ -1,0 +1,72 @@
+#1.Library
+
+book
+ * id integer
+ - title text
+ - author text
+ - publisher text
+ -category text
+  
+borrowing
+ * id integer
+ - books => book.id
+ - borrowdate date
+ - returndate date
+  
+borrower
+ * id integer
+ - cardnumber => borrowing.id
+ - name text
+ - birthdate date
+ - address text
+ - phone integer
+
+ 
+#2. Class
+
+students
+ * id integer
+ - name text
+ 
+classes
+ * id integer
+ - subject text 
+ 
+homework
+ *id integer
+ -subjects => subject.id
+ -student => students.id
+ -score integer
+ 
+test
+ *id integer
+ -subjects => subject.id
+ -student => students.id
+ -score integer
+ 
+finalproject
+ *id integer
+ teamname integer
+ member => students.id
+ 
+  
+#3. Reception of Music
+
+music
+ * id integer
+ - title integer
+ 
+playbills
+ * id integer
+ - musics =>music.id
+ - date date
+ - place text
+ - playedby text
+ 
+ 
+ reviews
+ * id integer
+ - musics text =>playbills.id
+ - author text
+ - summary text
+ - rating integer
