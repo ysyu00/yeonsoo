@@ -1,0 +1,22 @@
+#1.Library
+
+book
+ * id integer
+ - title text
+ - author text
+ - publisher text
+ - category text
+  
+borrowing
+ * id integer
+ - books => book.id
+ - borrowdate date
+ - returndate date
+  
+borrower
+ * id integer
+ - cardnumber => borrowing.id
+ - name text
+ - birthdate date
+ - address text
+ - phone integer

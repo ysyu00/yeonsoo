@@ -1,0 +1,20 @@
+#3. Reception of Music
+
+music
+ * id integer
+ - title integer
+ 
+playbills
+ * id integer
+ - musics =>music.id
+ - date date
+ - place text
+ - playedby text
+ 
+ 
+reviews
+ * id integer
+ - musics text =>playbills.id
+ - author text
+ - summary text
+ - rating integer

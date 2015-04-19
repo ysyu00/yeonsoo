@@ -1,0 +1,30 @@
+CREATE TABLE students (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	name TEXT
+);
+
+CREATE TABLE classes (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	subject TEXT
+);
+
+CREATE TABLE homework (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	subjects INTEGER REFERENCES classes(id),
+	student INTEGER REFERENCES students(id),
+	score INTEGER
+);
+
+CREATE TABLE test (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	subjects INTEGER REFERENCES classes(id),
+	student INTEGER REFERENCES students(id),
+	score INTEGER
+);
+
+CREATE TABLE finalproject (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	teamname INTEGER,
+	member INTEGER REFERENCES students(id)
+);
+
