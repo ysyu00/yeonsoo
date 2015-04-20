@@ -1,0 +1,31 @@
+#2. Class
+
+# -- In the 'homework' and 'test' tables, you referred to 'subjects.id',
+# but there is no subjects table. I am guessing it should have been
+# 'classes.id', and have corrected it accordingly.
+
+students
+ * id integer
+ - name text
+ 
+classes
+ * id integer
+ - subject text 
+ 
+homework
+ * id integer
+ - subjects => classes.id
+ - student => students.id
+ - score integer
+ 
+test
+ * id integer
+ - subjects => classes.id
+ - student => students.id
+ - score integer
+ 
+finalproject
+ * id integer
+ - teamname integer
+ - member => students.id
+ 
