@@ -1,0 +1,33 @@
+1.How do you get the title of the work?
+//title/text()
+
+2.How do you get the title of the chapter? (Hint: it's not in a 'title' element.)
+//head/text()
+
+3.What types of div appear in the document?
+//div/@type
+
+4.What was said in French? (Hint: look for an element with the 'xml:lang' attribute set to 'fr-FR'.)
+//q[@xml:lang="fr-FR"]/text()
+
+5.How do you get the first footnote in the text?
+//p[@part="F"]/text()
+
+6. What page numbers appear in the document?
+//child::item[2]
+
+7. How do you get the contents of page 198?
+//pb[@n="198"] ************************************************not sure
+
+8. How do you get the items in the list in the text?
+//item/child::node() ************************************************not sure
+
+9. How do you get just the second item?
+//child::item[2]
+
+10. What work (author and title) was cited in the footnote?
+/descendant::bibl/author ************************************************not sure
+/descendant::bibl/title
+
+11. How do you get the paragraphs at the top of each page?
+/descendant::pb/following-sibling::p[1]
